@@ -1,13 +1,18 @@
 import "./Search.css";
 
-const Search = () => {
+const Search = ({ bookKeyword, setBookKeyword, searchBookHandler }) => {
   return (
     <>
-      <input
-        className="book-search"
-        type="text"
-        placeholder="Search Books Name Here...."
-      />
+      <form onSubmit={searchBookHandler}>
+        <input
+          className="book-search"
+          type="text"
+          placeholder="Search Books Name Here...."
+          onChange={(e) => setBookKeyword(e.target.value)}
+          value={bookKeyword}
+        />
+        <button type="submit">Search</button>
+      </form>
     </>
   );
 };
