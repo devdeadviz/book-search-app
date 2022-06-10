@@ -1,12 +1,13 @@
 import "./Card.css";
 
 const Card = ({ book }) => {
+  console.log(book);
   return (
     <div className="book-card-wrapper">
       <div className="book-card-image-wrapper">
         <img
           className="book-thumbnail"
-          src={book.imageLinks.thumbnail}
+          src={book.volumeInfo.imageLinks.thumbnail}
           alt={book.volumeInfo.title}
         />
       </div>

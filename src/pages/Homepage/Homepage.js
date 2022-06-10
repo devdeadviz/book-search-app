@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search } from "../../components";
+import { Card, Search } from "../../components";
 import { getVolumes } from "../../services";
 import "./Homepage.css";
 
@@ -21,6 +21,9 @@ const Homepage = () => {
         setBookKeyword={setBookKeyword}
         searchBookHandler={searchBookHandler}
       />
+      <div className="homepage-books-wrapper">
+        {books && books.map((book) => <Card key={book.id} book={book} />)}
+      </div>
     </div>
   );
 };
