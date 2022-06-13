@@ -1,11 +1,10 @@
-import { useState } from "react";
 import { Card, Search } from "../../components";
+import { useBooks } from "../../contexts";
 import { getVolumes } from "../../services";
 import "./Homepage.css";
 
 const Homepage = () => {
-  const [bookKeyword, setBookKeyword] = useState("");
-  const [books, setBooks] = useState([]);
+  const { bookKeyword, books, setBooks } = useBooks();
 
   const searchBookHandler = async (e) => {
     e.preventDefault();
@@ -16,11 +15,7 @@ const Homepage = () => {
   return (
     <div className="homepage-wrapper">
       <h1>Book Search App</h1>
-      <Search
-        bookKeyword={bookKeyword}
-        setBookKeyword={setBookKeyword}
-        searchBookHandler={searchBookHandler}
-      />
+      <Search searchBookHandler={searchBookHandler} />
       <div className="homepage-books-wrapper">
         {books && books.map((book) => <Card key={book.id} book={book} />)}
       </div>

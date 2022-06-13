@@ -1,6 +1,9 @@
+import { useBooks } from "../../contexts";
 import "./Search.css";
 
-const Search = ({ bookKeyword, setBookKeyword, searchBookHandler }) => {
+const Search = ({ searchBookHandler }) => {
+  const { bookKeyword, setBookKeyword } = useBooks();
+
   return (
     <>
       <form onSubmit={searchBookHandler}>
