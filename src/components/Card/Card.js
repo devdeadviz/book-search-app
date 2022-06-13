@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Card.css";
 
 const Card = ({ book }) => {
@@ -27,9 +28,11 @@ const Card = ({ book }) => {
         </div>
       </div>
       <div className="book-card-footer">
-        <button type="button" className="book-view-btn">
-          View Book
-        </button>
+        <Link to={`/book/${book.id}`}>
+          <button type="button" className="book-view-btn">
+            View Book
+          </button>
+        </Link>
       </div>
     </div>
   );
