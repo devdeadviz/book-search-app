@@ -13,7 +13,7 @@ const SingleBook = () => {
       const data = await getSingleVolume(bookId);
       setBook(data);
     })();
-  }, []);
+  }, [bookId]);
 
   return (
     <div className="single-book-wrapper">
@@ -35,7 +35,7 @@ const SingleBook = () => {
         <p>{book?.volumeInfo.description}</p>
         <div className="single-book-details-wrapper mt-2">
           <div className="single-book-published-date">
-            Categories:{" "}
+            Categories:
             {book?.volumeInfo?.categories?.map((category) => category)}
           </div>
           <div className="single-book-rating">
