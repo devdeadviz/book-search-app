@@ -1,0 +1,40 @@
+.book-card-wrapper {
+  /* width: 20rem; */
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+
+.book-thumbnail {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.book-card-heading {
+  margin: 5px;
+}
+
+.book-card-sub-heading {
+  margin: 1rem 5px;
+}
+
+.book-card-body {
+  margin: 1rem 5px;
+}
+
+.book-published-date {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.book-rating {
+  font-weight: bold;
+}
+
+.book-view-btn {
+  padding: 5px;
+  width: 100%;
+}
+
+.book-view-btn:hover {
+  cursor: pointer;
+}

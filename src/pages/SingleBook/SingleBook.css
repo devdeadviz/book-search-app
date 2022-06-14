@@ -1,0 +1,11 @@
+.single-book-wrapper {
+  margin: 4rem;
+}
+
+.single-book-view-btn {
+  margin-top: 1rem;
+}
+
+.single-book-view-btn:hover {
+  cursor: pointer;
+}
