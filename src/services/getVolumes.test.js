@@ -9,7 +9,7 @@ describe("get books service", () => {
     const items = [
       {
         id: 1,
-        name: "Javscript",
+        name: "Javascript",
       },
       {
         id: 2,
